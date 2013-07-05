@@ -1,0 +1,3 @@
+echo "Compiling $1"
+dmd $1.d -I~/Programming/Derelict3/import/ -I~/Programming/glfw_d/ -c -g
+clang -F/System/Library/Frameworks -framework OpenGL -framework Cocoa -framework IOKit -L/usr/local/lib -lglfw3 -L /Users/msk/Programming/Derelict3/lib/ -lDerelictGL3 -lDerelictUtil -lphobos2 $1.o -o$1
